@@ -1,74 +1,195 @@
-<!DOCTYPE html>
-<html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/uikit.min.css">
+        <link rel="stylesheet" href="css/docs.css">
+        <link rel="stylesheet" href="css/highlight.css">
+        <link rel="stylesheet" href="css/uikit.docs.min.css">
+        <script src="js/docs.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/highlight.js"></script>
+        <script src="js/uikit.min.js"></script>
+        <script src="js/addons/search.js"></script>
+        <script src="js/addons/search.min.js"></script>
+        <script src="js/notify.js"></script>
+    <title>游戏空间</title>
+    <script>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Soys.github.io : ">
+        $(function(){
+            $("body").on("click", ".uk-button[data-message]", function(){
+                $.UIkit.notify($(this).data());
+            });
+        })
+        
+</script>
+    </head>
+<body>
+<nav class="uk-navbar">
+    <ul class="uk-navbar-nav">
+        <li><a data-uk-offcanvas="{target:'#offcanvas-12450'}">Soys space</a></li>
+        
+                                            </ul>
+                                            <div class="uk-navbar-flip">
+                                            <ul class="uk-navbar-nav">
+                                            <li class="uk-parent" data-uk-dropdown="{mode:'click'}">
+                                        <a><i class="uk-icon-search"></i>搜索</a>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                             <form class="uk-search" data-uk-search="{flipDropdown:true, source:'../vendor/searchresults.json'}">
+                                            <input class="uk-search-field" type="search" placeholder="search...">
+                                            <button class="uk-search-close" type="reset"></button>
+                                        </form>
+                                            </ul>
+                                            </div>
+                                            </li>
+                                             <li class="uk-parent" data-uk-dropdown="{mode:'click'}">
+                                        <a><i class="uk-icon-user-md"></i>注册</a>
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                            //Register
+                                      <form class="uk-form">
 
-    <title>Soys.github.io</title>
-  </head>
+    <fieldset data-uk-margin="">
+        <input type="text" placeholder="UserName">
+        <input type="password" placeholder="Password">
+        <input type="email" placeholder="Email">
+        <li>Q:12450</li>
+        <input type="text" placeholder="Answer">
+        <button class="uk-button">register</button>
+    </fieldset>
 
-  <body>
+</form>
+</ul>
+</div>
+</li>
+                                            <li class="uk-parent" data-uk-dropdown="{mode:'click'}">
+                                        <a><i class="uk-icon-user"></i>登陆</a>
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                            //Login
+                                      <form class="uk-form">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Soys">View on GitHub</a>
+    <fieldset data-uk-margin="">
+        <input type="text" placeholder="UserName">
+        <input type="password" placeholder="Password">
+        <button class="uk-button">Login</button>
+        <label><input type="checkbox">Remember</label>
+    </fieldset>
 
-          <h1 id="project_title">Soys.github.io</h1>
-          <h2 id="project_tagline"></h2>
+</form>
+</ul>
+</div>
+</li>
+</ul></div>
+                                       
+                                 
+                                        
 
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+                                    
     
+                             
+</nav>
+<div id="offcanvas-12450" class="uk-offcanvas">
 
-  </body>
-</html>
+                                <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
+
+                                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
+                                  
+                                        <li class="uk-nav-header">Header</li>
+                                        <li class=""><a href="#"><i class="uk-icon-weibo"></i> 微博</a></li>
+                                        <li><a href=""><i class="uk-icon-twitter"></i> Item</a></li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href=""><i class="uk-icon-rss"></i> Item</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                      <div class="uk-grid" data-uk-grid-margin="">
+                <div class="uk-width-1-1">
+                    <h1 class="uk-heading-large">游戏空间</h1>
+                    <p class="uk-text-large">一些不得已才用自己空间放的游戏哦~(测试阶段) &ensp;&ensp;<button class="uk-button uk-button-danger" data-message="<i class='uk-icon-check'></i>版本号：0.2 制作时间:2014.10.15">版本号</button>  |  <button class="uk-button uk-button-primary" data-uk-modal="{target:'#update'}">更新历史</button> </p>
+                </div>
+            </div>
+            <div id="update" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+ <span class="uk-text-large">  -  更新历史  -  </span>
+ <p></p>
+ <p></p>
+  <p></p>
+ <p><span class="uk-text-bold">-Ver 0.2 Test -</span><span class="uk-text-warning">&ensp;2014.10.15</span></p>
+ <p><span class="uk-text-primary">1.新增更新历史和版本号提醒。</span><br/>
+  <span class="uk-text-primary">2.正式在<span class="uk-text-success">&lt;body&gt;</span>里写入东西。</span><br/>
+  <span class="uk-text-primary">3.修复一点点小细节。</span></p>
+   <p></p>
+ <p></p>
+  <p></p>
+ <p><span class="uk-text-bold">-Ver 0.1 Test -</span><span class="uk-text-warning">&ensp;2014.10.14</span></p>
+ <p><span class="uk-text-primary">1.加入CSS、JS。</span><br/>
+ <span class="uk-text-primary">2.增加顶部栏、弹出幕布。</span><br/>
+ <span class="uk-text-primary">3.新增了暂时无用的搜索功能和<del>可能永远无用</del>的登录和注册</span></p>
+ <p></p>
+ <p></p>
+ <p>  -  END  -  </p>
+    </div>
+</div>
+<div class="uk-grid" data-uk-grid-margin="">
+                <div class="uk-width-1-1">
+
+                    <ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#switcher-content'}">
+                                
+                                <li class="uk-active"><a href="#">2014.10</a></li>
+                                <li class=""><a href="#">2014.11</a></li>
+                                <li class=""><a href="#">2014.12</a></li>
+                           
+                    </ul>
+
+                    <ul id="switcher-content" class="uk-switcher">
+
+                        
+<li class="uk-active">
+                            <div class="uk-grid" data-uk-grid-margin="">
+                                <div class="uk-width-medium-1-3">
+                                    <a class="uk-thumbnail uk-overlay-toggle" data-uk-modal="{target:'#modal-1'}">
+                                        <div class="uk-overlay">
+                                        <img src="http://tp3.sinaimg.cn/1709827682/180/40067105837/1">
+                                           <div class="uk-overlay-caption">星之卡比</div>
+                                            <div class="uk-overlay-area"></div>
+                                        </div>
+                                    </a>
+                                    <div id="modal-1" class="uk-modal">
+                                        <div class="uk-modal-dialog uk-modal-dialog-frameless">
+                                            <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+                                            <iframe src="xzkb.html" width="520" height="500"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                   
+                             </div>
+                                    </li>
+<li>
+                            <div class="uk-grid" data-uk-grid-margin="">
+                                <div class="uk-width-medium-1-1">
+<div class="uk-alert">啊哦~没数据哟~(404)</div>
+                                </div>
+                                   
+                             </div>
+                                    </li><li class="">
+                            <div class="uk-grid" data-uk-grid-margin="">
+                                <div class="uk-width-medium-1-1">
+<div class="uk-alert">啊哦~没数据哟~(404)</div>
+                                </div>
+                                   
+                             </div>
+                                    </li></ul></div>
+                        
+</div>
+                            
+                        
+                               
+                    
+
+                
+            
+</body></html>
