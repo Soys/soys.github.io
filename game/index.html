@@ -1,31 +1,396 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<link id="data-uikit-theme" rel="stylesheet" href="../css/uikit.docs.min.css">
-        <link rel="stylesheet" href="../css/docs.css">
-        <link rel="stylesheet" href="../css/highlight.css">
-        <script src="../js/jquery.js"></script>
-        <script src="../js/uikit.min.js"></script>
-        <script src="../js/highlight.js"></script>
-        <script src="../js/docs.js"></script>
-<title>游戏空间</title>
-</head>
-
-<body>
-<button class="uk-button uk-button-danger" data-uk-offcanvas="{target:'#12450'}">Soys Space</button>
-
-
-
-
-
-<div id="12450" class="uk-offcanvas">
-
-                                <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
-
-                                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
-                                    <li class="uk-nav-header">23333</li>
-                                    <li><a href="#"><i class="uk-icon-twitter"></i>推特</a></li>
-                           
-</body>
-</html>
+\f0c9";
+  font-family: FontAwesome;
+}
+/* Sub-object `uk-nestable-moving`
+ ========================================================================== */
+.uk-nestable-moving,
+.uk-nestable-moving * {
+  cursor: move;
+}
+/* Sub-object `[data-action='toggle']`
+ ========================================================================== */
+/* Hidden by default */
+[data-nestable-action='toggle'] {
+  display: inline-block;
+  color: #999999;
+  visibility: hidden;
+}
+/* Hover */
+[data-nestable-action='toggle']:hover {
+  color: #444444;
+  cursor: pointer;
+}
+/* Icon */
+[data-nestable-action='toggle']:after {
+  content: "\f147";
+  font-family: FontAwesome;
+}
+/*
+ * Show if nested
+ */
+.uk-parent > .uk-nestable-item [data-nestable-action='toggle'] {
+  visibility: visible;
+}
+/*
+ * Collapsed
+ */
+.uk-collapsed > .uk-nestable-item [data-nestable-action='toggle']:after {
+  content: "\f196";
+}
+.uk-collapsed .uk-nestable-list {
+  display: none;
+}
+/* ========================================================================
+   Component: Notify
+ ========================================================================== */
+/*
+ * Message container for positioning
+ */
+.uk-notify {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1040;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 350px;
+}
+/* Position modifiers
+========================================================================== */
+.uk-notify-top-right,
+.uk-notify-bottom-right {
+  left: auto;
+  right: 10px;
+}
+.uk-notify-top-center,
+.uk-notify-bottom-center {
+  left: 50%;
+  margin-left: -175px;
+}
+.uk-notify-bottom-left,
+.uk-notify-bottom-right,
+.uk-notify-bottom-center {
+  top: auto;
+  bottom: 10px;
+}
+/* Responsiveness
+========================================================================== */
+/* Phones portrait and smaller */
+@media (max-width: 479px) {
+  /*
+     * Fit in small screen
+     */
+  .uk-notify {
+    left: 10px;
+    right: 10px;
+    width: auto;
+    margin: 0;
+  }
+}
+/* Sub-object: `uk-notify-message`
+========================================================================== */
+.uk-notify-message {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 15px;
+  background: #444444;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+/* Close in notify
+ ========================================================================== */
+.uk-notify-message > .uk-close {
+  visibility: hidden;
+  float: right;
+}
+.uk-notify-message:hover > .uk-close {
+  visibility: visible;
+}
+/* Modifier: `uk-alert-info`
+ ========================================================================== */
+.uk-notify-message-primary {
+  background: #ebf7fd;
+  color: #2d7091;
+}
+/* Modifier: `uk-alert-success`
+ ========================================================================== */
+.uk-notify-message-success {
+  background: #f2fae3;
+  color: #659f13;
+}
+/* Modifier: `uk-notify-message-warning`
+ ========================================================================== */
+.uk-notify-message-warning {
+  background: #fffceb;
+  color: #e28327;
+}
+/* Modifier: `uk-notify-message-danger`
+ ========================================================================== */
+.uk-notify-message-danger {
+  background: #fff1f0;
+  color: #d85030;
+}
+/* ========================================================================
+   Component: Search
+ ========================================================================== */
+/*
+ * 1. Create position context for dropdowns
+ * 2. Needed for `form` element
+ */
+.uk-search {
+  display: inline-block;
+  /* 1 */
+  position: relative;
+  /* 2 */
+  margin: 0;
+}
+/*
+ * Icon
+ */
+.uk-search:before {
+  content: "\f002";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-family: FontAwesome;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+}
+/* Sub-object `uk-search-field`
+ ========================================================================== */
+/*
+ * 1. Needed to reset iOS `input[type="search"]` appearance
+ */
+.uk-search-field {
+  width: 120px;
+  height: 30px;
+  padding: 0 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
+  color: #444444;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  /* 1 */
+  border-radius: 0;
+}
+/*
+ * Needed to reset iOS `input[type="search"]` appearance
+ * Higher specificity to override appearance set by normalize.less
+ */
+input.uk-search-field {
+  -webkit-appearance: none;
+}
+/* Placeholder */
+.uk-search-field:-ms-input-placeholder {
+  color: #999999;
+}
+.uk-search-field::-moz-placeholder {
+  color: #999999;
+}
+.uk-search-field::-webkit-input-placeholder {
+  color: #999999;
+}
+/* Removes cancel button in IE10 */
+.uk-search-field::-ms-clear {
+  display: none;
+}
+/* Focus */
+.uk-search-field:focus {
+  outline: 0;
+}
+/* Focus + active */
+.uk-search-field:focus,
+.uk-search.uk-active .uk-search-field {
+  width: 180px;
+}
+/* Sub-object `uk-search-close`
+ ========================================================================== */
+/*
+ * 1. Required for `button` elements
+ * 2. Needed for Safari
+ */
+.uk-search-close {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+  /* 1. */
+  padding: 0;
+  border: 0;
+  -webkit-appearance: none;
+  /* 2. */
+  background: transparent;
+}
+.uk-loading > .uk-search-close,
+.uk-active > .uk-search-close {
+  display: block;
+}
+/*
+ * Icon
+ */
+.uk-search-close:after {
+  display: block;
+  content: "\f00d";
+  font-family: FontAwesome;
+}
+/* Loading icon */
+.uk-loading > .uk-search-close:after {
+  content: "\f110";
+  -webkit-animation: uk-spin 2s infinite linear;
+  animation: uk-spin 2s infinite linear;
+}
+/* Dropdown modifier: `uk-dropdown-search`
+ ========================================================================== */
+.uk-dropdown-search {
+  width: 300px;
+  margin-top: 0;
+  background: #f5f5f5;
+  color: #444444;
+}
+.uk-open > .uk-dropdown-search {
+  -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
+  animation: uk-slide-top-fixed 0.2s ease-in-out;
+}
+/*
+ * Dependency `uk-navbar-flip`
+ */
+.uk-navbar-flip .uk-dropdown-search {
+  margin-top: 5px;
+  margin-right: -15px;
+}
+/* Nav modifier `uk-nav-search`
+ ========================================================================== */
+/*
+ * Items
+ */
+.uk-nav-search > li > a {
+  color: #444444;
+}
+/*
+ * Active
+ * 1. Remove default focus style
+ */
+.uk-nav-search > li.uk-active > a {
+  background: #00a8e6;
+  color: #ffffff;
+  /* 1 */
+  outline: none;
+}
+/*
+ * Sub-object: `uk-nav-header`
+ */
+.uk-nav-search .uk-nav-header {
+  color: #999999;
+}
+/*
+ * Sub-object: `uk-nav-divider`
+ */
+.uk-nav-search .uk-nav-divider {
+  border-top: 1px solid #dddddd;
+}
+/*
+ * Nested items
+ */
+.uk-nav-search ul a {
+  color: #0077dd;
+}
+.uk-nav-search ul a:hover {
+  color: #005599;
+}
+/* Search in offcanvas
+ ========================================================================== */
+.uk-offcanvas .uk-search {
+  display: block;
+  margin: 20px 15px;
+}
+.uk-offcanvas .uk-search:before {
+  color: #777777;
+}
+.uk-offcanvas .uk-search-field {
+  width: 100%;
+  border-color: rgba(0, 0, 0, 0);
+  background: #1a1a1a;
+  color: #cccccc;
+}
+.uk-offcanvas .uk-search-field:-ms-input-placeholder {
+  color: #777777;
+}
+.uk-offcanvas .uk-search-field::-moz-placeholder {
+  color: #777777;
+}
+.uk-offcanvas .uk-search-field::-webkit-input-placeholder {
+  color: #777777;
+}
+/* ========================================================================
+   Component: Sortable
+ ========================================================================== */
+.uk-sortable {
+  position: relative;
+}
+/*
+ * Makes text unselectable
+ */
+.uk-sortable > * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+ * Prevents images and links from being dragged (default browser behavior)
+ * Currently only works in Webkit
+ */
+.uk-sortable > * * {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+/* Sub-modifier `uk-sortable-dragged`
+ ========================================================================== */
+.uk-sortable-dragged {
+  position: absolute;
+  z-index: 1050;
+  pointer-events: none;
+}
+/* Sub-modifier `uk-sortable-placeholder`
+ ========================================================================== */
+.uk-sortable-placeholder {
+  opacity: 0;
+}
+/* Sub-modifier `uk-sortable-over`
+ * Only if `warp:true`
+ ========================================================================== */
+.uk-sortable-over {
+  opacity: 0.3;
+}
+/* Sub-object `uk-nestable-moving`
+ ========================================================================== */
+.uk-sortable-moving,
+.uk-sortable-moving * {
+  cursor: move;
+}
+/* ========================================================================
+   Component: Sticky
+ ========================================================================== */
+.uk-sticky {
+  z-index: 980;
+}
+/* ========================================================================
+   Component: Upload
+ ========================================================================== */
+/*
+ * Create a box-shadow when dragging a file over the upload area
+ */
+.uk-dragover {
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.3);
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
