@@ -2,14 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-  <link  rel="stylesheet" href="css/uikit.docs.min.css">
+        <link rel="stylesheet" href="css/uikit.gradient.css">
+        <link id="data-uikit-theme" rel="stylesheet" href="css/uikit.docs.min.css">
         <link rel="stylesheet" href="css/docs.css">
         <link rel="stylesheet" href="css/highlight.css">
         <script src="js/jquery.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/highlight.js"></script>
         <script src="js/docs.js"></script>
+        <script src="js/addons/notify.js"></script>
 <title>Soys space - 游戏空间</title>
+<script>
+        $(function(){
+            $("body").on("click", ".uk-button[data-message]", function(){
+                $.UIkit.notify($(this).data());
+            });
+        })
+        </script>
+
 </head>
 
 <body>
@@ -17,13 +27,20 @@
 
                                 <ul class="uk-navbar-nav">
                                     <li><a class="uk-button uk-navbar-nav-subtitle" data-uk-offcanvas="{target:'#12450'}">Soys Space<div>点我召唤侧边栏</div></a></li>
+                                   <div class="uk-navbar-content  ">
+                                <a href="#" class="uk-button"><i class="uk-icon-bars"></i></a>
+                                <a href="#" class="uk-button"><i class="uk-icon-fast-backward"></i></a>
+                                <a href="#" class="uk-button"><i class="uk-icon-stop"></i></a>
+                                <a href="#" class="uk-button"><i class="uk-icon-play"></i></a>
+                                <a href="#" class="uk-button"><i class="uk-icon-fast-forward"></i></a>
+                            </div>
                                  <div class="uk-navbar-content uk-hidden-small">
                                         <form class="uk-form uk-margin-remove uk-display-inline-block">
                                             <input type="text" placeholder="Search">
                                             <button class="uk-button uk-button-primary">Submit</button>
                                         </form>
                                     </div>
-                                    <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
+                                   <div class="uk-navbar-content uk-navbar-flip  uk-hidden-small">
                                         <div class="uk-button-group">
                                             <a class="uk-button uk-button-danger" href="#">Link</a>
                                             <button class="uk-button uk-button-danger">Button</button>
@@ -34,17 +51,38 @@
 
                                     </li>
                                 </ul>
-
+</nav>
                        <div id="12450" class="uk-offcanvas">
 
                                 <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
 
                                     <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
-                                        <li><a href=""><i class="uk-icon-twitch"></i>Item</a></li>
-                                     
-
+                                        <li class="uk-nav-header">游戏空间</li>
+                                        <li><a href=""><i class="uk-icon-home"></i>首页</a></li>
+                                        <li class="uk-parent"><a href="#">过往游戏</a>
+                                        <ul class="uk-nav-sub">
+                                        <li>10月</li>
+                                        <li>11月</li>
+                                        </ul>
+</li>
+<li class="uk-nav-header">关于我(About Me)</li>
+<li><a href="http://weibo.com/876654044/"><i class="uk-icon-weibo"></i>weibo</a></li>
+<li><a href="http://twitter.com/a876654044/"><i class="uk-icon-twitter"></i>Twitter(推特)</a></li>
+<li><a href="http://steamcommunity.com/id/OnlyMySoys/"><i class="uk-icon-steam"></i>STEAM</a>
                                 </div>
 
                             </div>
+                           </ul>
+                  <span class="uk-heading-large">游戏空间</span><br/>
+                  <span class="uk-text-large">测试中...<a href="#update" class="uk-button uk-button-success" data-uk-modal>更新历史</a>&ensp;|&ensp;<button class="uk-button uk-button-danger" data-message="<i class='uk-icon-exclamation'></i>版本号:0.5 时间:2014-10-27">版本号</button></span>
+<div id="update" class="uk-modal">
+    <div class="uk-modal-dialog uk-modal-dialog-frameless">
+        <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+        <span class="uk-text-large">更新历史</span><span class="uk-text-small uk-text-warning">&ensp;-重制于2014-10-27</span><br/>
+        <br/>
+        <br/>
+        <span class="uk-text-danger">Ver 0.1~0.4 Can't Found!</span>
+    </div>
+</div>
 </body>
 </html>
