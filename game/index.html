@@ -3,15 +3,23 @@
 <head>
 <meta charset="utf-8">
         <link rel="stylesheet" href="css/uikit.gradient.css">
-        <link id="data-uikit-theme" rel="stylesheet" href="css/uikit.docs.min.css">
-        <link rel="stylesheet" href="css/docs.css">
         <link rel="stylesheet" href="css/highlight.css">
         <script src="js/jquery.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/highlight.js"></script>
-        <script src="js/docs.js"></script>
-        <script src="js/addons/notify.js"></script>
+        <script src="js/bg.js"></script>
 <title>Soys space - 游戏空间</title>
+<style>
+body
+  {
+  background-image: url(../pic/g47390117.jpg);
+  background-repeat:no-repeat;
+  background-origin:content-box;
+  background-attachment:fixed;
+  min-height:1024px;
+  min-width:768px;
+  }
+</style>
 <script>
         $(function(){
             $("body").on("click", ".uk-button[data-message]", function(){
@@ -19,7 +27,6 @@
             });
         })
         </script>
-
 </head>
 
 <body>
@@ -74,7 +81,7 @@
                             </div>
                            </ul>
                   <span class="uk-heading-large">游戏空间</span><br/>
-                  <span class="uk-text-large">测试中...<a href="#update" class="uk-button uk-button-success" data-uk-modal>更新历史</a>&ensp;|&ensp;<button class="uk-button uk-button-danger" data-message="<i class='uk-icon-exclamation'></i>版本号:0.5 时间:2014-10-27">版本号</button></span>
+                  <span class="uk-text-large">测试中...<a href="#update" class="uk-button uk-button-success" data-uk-modal>更新历史</a></span>
 <div id="update" class="uk-modal">
     <div class="uk-modal-dialog uk-modal-dialog-frameless">
         <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
@@ -83,6 +90,16 @@
         <br/>
         <span class="uk-text-danger">Ver 0.1~0.4 Can't Found!</span>
     </div>
+</div>
+<div class="uk-slidenav-position">
+    <img src="../pic/test.jpg" width="200" height="100"  data-uk-modal="{target:'#mxd01'}"/>
+    <a href="#" class="uk-slidenav uk-slidenav-previous"></a>
+    <a href="#" class="uk-slidenav uk-slidenav-next"></a>
+</div>
+<div id="mxd01" class="uk-modal">
+ <div class="uk-modal-dialog uk-modal-dialog-frameless">
+        <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+<iframe src="mxd01.html" width="200" height="100"></iframe>
 </div>
 </body>
 </html>

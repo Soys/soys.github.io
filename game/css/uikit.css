@@ -1,4 +1,4 @@
-/*! UIkit 2.11.0 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
+/*! UIkit 2.13.1 | http://www.getuikit.com | (c) 2014 YOOtheme | MIT License */
 /* ========================================================================
    Component: Base
  ========================================================================== */
@@ -391,21 +391,16 @@ iframe {
    Component: Grid
  ========================================================================== */
 /*
- * Micro clearfix
- */
-.uk-grid:before,
-.uk-grid:after {
-  content: " ";
-  display: table;
-}
-.uk-grid:after {
-  clear: both;
-}
-/*
  * 1. Needed for the gutter
  * 2. Makes grid more robust so that it can be used with other block elements like lists
  */
 .uk-grid {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   /* 1 */
   margin: 0 0 0 -25px;
   /* 2 */
@@ -413,17 +408,36 @@ iframe {
   list-style: none;
 }
 /*
+ * DEPRECATED
+ * Micro clearfix
+ * 1. Not possible to use `table` because it creates a 1px gap when it becomes a flex item
+ */
+.uk-grid:before,
+.uk-grid:after {
+  content: "";
+  /* 1 */
+  display: block;
+}
+.uk-grid:after {
+  clear: both;
+}
+/*
  * Grid cell
- * 1. Makes grid more robust so that it can be used with other block elements
- * 2. Create horizontal gutter
- * 3. `float` is set by default so columns always behave the same and create a new block format context
+ * 1. Space is allocated solely based on content dimensions
+ * 2. Makes grid more robust so that it can be used with other block elements
+ * 3. Create horizontal gutter
+ * 4. DEPRECATED Using `float` to support IE9
  */
 .uk-grid > * {
   /* 1 */
-  margin: 0;
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
   /* 2 */
-  padding-left: 25px;
+  margin: 0;
   /* 3 */
+  padding-left: 25px;
+  /* 4 */
   float: left;
 }
 /*
@@ -558,6 +572,25 @@ iframe {
   margin-top: 25px;
   margin-bottom: 25px;
   border-top: 1px solid #dddddd;
+}
+/* Match panels in grids
+ ========================================================================== */
+.uk-grid-match > * {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/*
+ * 1. Behave like a block element
+ */
+.uk-grid-match > * > * {
+  -ms-flex: none;
+  -webkit-flex: none;
+  flex: none;
+  /* 1 */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
 }
 /* Even grid cell widths
  ========================================================================== */
@@ -1100,8 +1133,8 @@ iframe {
  */
 .uk-panel:before,
 .uk-panel:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-panel:after {
   clear: both;
@@ -1221,8 +1254,8 @@ iframe {
  */
 .uk-article:before,
 .uk-article:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-article:after {
   clear: both;
@@ -1288,8 +1321,8 @@ iframe {
  */
 .uk-comment-header:before,
 .uk-comment-header:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-comment-header:after {
   clear: both;
@@ -1610,8 +1643,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-navbar:before,
 .uk-navbar:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-navbar:after {
   clear: both;
@@ -1950,8 +1983,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-pagination:before,
 .uk-pagination:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-pagination:after {
   clear: both;
@@ -2057,8 +2090,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-tab:before,
 .uk-tab:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-tab:after {
   clear: both;
@@ -2156,8 +2189,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 }
 .uk-tab-center:before,
 .uk-tab-center:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-tab-center:after {
   clear: both;
@@ -2330,8 +2363,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-list > li:before,
 .uk-list > li:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-list > li:after {
   clear: both;
@@ -2742,11 +2775,15 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   font-size: 18px;
   line-height: 30px;
 }
-/* 4 */
+/*
+ * 1. Fixes IE9
+ */
 .uk-form legend:after {
   content: "";
   display: block;
   border-bottom: 1px solid #dddddd;
+  /* 1 */
+  width: 100%;
 }
 /* Size modifiers
  * Higher specificity needed to override defaults
@@ -2838,8 +2875,8 @@ select.uk-form-width-mini {
  */
 .uk-form-row:before,
 .uk-form-row:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-form-row:after {
   clear: both;
@@ -5187,7 +5224,8 @@ a.uk-thumbnail:focus {
 .uk-overlay-area-content a:not([class]):hover {
   color: inherit;
 }
-/* Sub-object `uk-overlay-caption`
+/* DEPRECATED
+ * Sub-object `uk-overlay-caption`
  ========================================================================== */
 /*
  * 1. Set position
@@ -5393,14 +5431,14 @@ a.uk-thumbnail:focus {
 .uk-animation-reverse {
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 /* Duration modifiers
 ========================================================================== */
-.uk-animation-10 {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+.uk-animation-15 {
+  -webkit-animation-duration: 15s;
+  animation-duration: 15s;
 }
 /* Origin modifiers
 ========================================================================== */
@@ -5435,6 +5473,19 @@ a.uk-thumbnail:focus {
 .uk-animation-bottom-right {
   -webkit-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
+}
+/* Sub-object: `uk-animation-hover`
+========================================================================== */
+/*
+ * Enable animation only on hover
+ * Needed for Firefox because animations are not triggered when switching between display `hidden` and `block`
+ */
+.uk-animation-hover:not(:hover),
+.uk-animation-hover:not(:hover) [class*='uk-animation-'],
+.uk-touch .uk-animation-hover:not(.uk-hover),
+.uk-touch .uk-animation-hover:not(.uk-hover) [class*='uk-animation-'] {
+  -webkit-animation-name: none;
+  animation-name: none;
 }
 /* Keyframes: Fade
  * Used by dropdown, datepicker and slideshow component
@@ -6187,7 +6238,8 @@ a.uk-thumbnail:focus {
  * This is the offcanvas overlay and bar container
  * 1. Hide by default
  * 2. Set fixed position
- * 3. Mask the background page
+ * 3. Deactivate browser touch actions in IE11
+ * 4. Mask the background page
  */
 .uk-offcanvas {
   /* 1 */
@@ -6200,6 +6252,8 @@ a.uk-thumbnail:focus {
   left: 0;
   z-index: 1000;
   /* 3 */
+  touch-action: none;
+  /* 4 */
   background: rgba(0, 0, 0, 0.1);
 }
 .uk-offcanvas.uk-active {
@@ -6227,6 +6281,7 @@ a.uk-thumbnail:focus {
  * 2. Size and style
  * 3. Allow scrolling
  * 4. Side-out transition
+ * 5. Deavtivate scroll chaining in IE11
  */
 .uk-offcanvas-bar {
   /* 1 */
@@ -6247,6 +6302,8 @@ a.uk-thumbnail:focus {
   /* 4 */
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  /* 5 */
+  -ms-scroll-chaining: none;
 }
 .uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show {
   -webkit-transform: translateX(0%);
@@ -6465,7 +6522,7 @@ a.uk-thumbnail:focus {
 .uk-text-bottom {
   vertical-align: bottom !important;
 }
-/* Only tablets portrait */
+/* Only tablets portrait and smaller */
 @media (max-width: 959px) {
   .uk-text-center-medium {
     text-align: center !important;
@@ -6526,8 +6583,8 @@ a.uk-thumbnail:focus {
  */
 .uk-container:before,
 .uk-container:after {
-  content: " ";
-  display: table;
+  content: "";
+  display: block;
 }
 .uk-container:after {
   clear: both;
@@ -6543,11 +6600,13 @@ a.uk-thumbnail:focus {
  ========================================================================== */
 /*
  * Micro clearfix
+ * 1. Not possible to use `table` because it creates a 1px gap when it becomes a flex item
  */
 .uk-clearfix:before,
 .uk-clearfix:after {
-  content: " ";
-  display: table;
+  content: "";
+  /* 1 */
+  display: block;
 }
 .uk-clearfix:after {
   clear: both;
@@ -6681,9 +6740,10 @@ a.uk-thumbnail:focus {
 }
 /*
  * Responsiveness: Sets a maximum width relative to the parent and auto scales the height
+ * `important` needed to override `uk-img-preserve img`
  */
 .uk-responsive-width {
-  max-width: 100%;
+  max-width: 100% !important;
   height: auto;
 }
 /*
