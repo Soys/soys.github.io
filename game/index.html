@@ -1,13 +1,16 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-        <link rel="stylesheet" href="css/uikit.gradient.css">
-        <link rel="stylesheet" href="css/highlight.css">
+ <link rel="stylesheet" href="css/uikit.css" />
+ <link rel="stylesheet" href="css/highlight.css" />
         <script src="js/jquery.js"></script>
+        <script src="js/uikit.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/highlight.js"></script>
-        <script src="js/bg.js"></script>
+        <script src="js/cover.js"></script>
+        <script src="js/components/slideshow.js"></script>
+        <script src="js/components/slideshow-fx.js"></script>
 <title>Soys space - 游戏空间</title>
 <style>
 body
@@ -54,12 +57,7 @@ body
                                     <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
                                         <li class="uk-nav-header">游戏空间</li>
                                         <li><a href=""><i class="uk-icon-home"></i>首页</a></li>
-                                        <li class="uk-parent"><a href="#">过往游戏</a>
-                                        <ul class="uk-nav-sub">
-                                        <li>10月</li>
-                                        <li>11月</li>
-                                        </ul>
-</li>
+                       
 <li class="uk-nav-header">关于我(About Me)</li>
 <li><a href="http://weibo.com/876654044/"><i class="uk-icon-weibo"></i>weibo</a></li>
 <li><a href="http://twitter.com/a876654044/"><i class="uk-icon-twitter"></i>Twitter(推特)</a></li>
@@ -68,8 +66,10 @@ body
 
                             </div>
                            </ul>
+                        
                   <span class="uk-heading-large">游戏空间</span><br/>
                   <span class="uk-text-large">测试中...<a href="#update" class="uk-button uk-button-success" data-uk-modal>更新历史</a></span>
+                 
 <div id="update" class="uk-modal">
     <div class="uk-modal-dialog uk-modal-dialog-frameless">
         <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
@@ -80,21 +80,6 @@ body
     </div>
 </div>
 
-<div class="uk-slidenav-position">
-    <img src="../pic/test.jpg" width="200" height="200" data-uk-modal="{target:'#mxd01'}" >
-    <img src="../pic/test.jpg" width="200" height="200" data-uk-modal="{target:'#mxd2'}" >
-    <a href="" class="uk-slidenav uk-slidenav-previous"></a>
-    <a href="" class="uk-slidenav uk-slidenav-next"></a>
-</div>
-<div id="mxd01" class="uk-modal">
- <div class="uk-modal-dialog uk-modal-dialog-frameless">
-        <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-<iframe src="mxd01.html" width="530" height="500"></iframe>
-</div>
-<div id="mxd2" class="uk-modal">
- <div class="uk-modal-dialog uk-modal-dialog-frameless">
-        <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
-<iframe src="mxd2.html" width="530" height="500"></iframe>
-</div>
+
 </body>
 </html>
