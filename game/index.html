@@ -2,22 +2,19 @@
 <html>
 <head>
 <meta charset="utf-8">
- <link rel="stylesheet" href="css/uikit.css" />
+ <link rel="stylesheet" href="css/uikit.min.css" />
  <link rel="stylesheet" href="css/highlight.css" />
         <script src="js/jquery.js"></script>
         <script src="js/uikit.js"></script>
         <script src="js/uikit.min.js"></script>
         <script src="js/highlight.js"></script>
         <script src="js/cover.js"></script>
-        <script src="js/components/slideshow.js"></script>
-        <script src="js/components/slideshow-fx.js"></script>
 <title>Soys space - 游戏空间 - soys.github.io</title>
 <style>
 body
   {
-  background-image: url(../pic/g47390117.jpg);
+  background-image: url(../pic/g47998123.jpg);
   background-repeat:no-repeat;
-  background-origin:content-box;
   background-attachment:fixed;
   min-height:1024px;
   min-width:768px;
@@ -33,6 +30,7 @@ body
 </head>
 
 <body>
+<project id="nav">
 <nav class="uk-navbar">
 
                                 <ul class="uk-navbar-nav">
@@ -67,7 +65,8 @@ body
 
                             </div>
                            </ul>
-                        
+</project>
+<project id="header">     
                   <span class="uk-heading-large">游戏空间</span><br/>
                   <span class="uk-text-large">测试中...<a href="#update" class="uk-button uk-button-success" data-uk-modal>更新历史</a></span>
                  
@@ -80,7 +79,19 @@ body
         <span class="uk-text-danger">Ver 0.1~0.4 Can't Found!</span>
     </div>
 </div>
+</project>
+<br>
+<br>
+<project id="main">
 
-
+<ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#game', animation: 'fade'}">
+<li class="uk-active"><a href="#" data-uk-tooltip="{pos:'top-left'}" data-uk-tooltip title="推荐的游戏XD">推荐</a></li>
+<li class=""><a href="#" data-uk-tooltip="{pos:'top-left'}" data-uk-tooltip title="最新创建的游戏">最新</a></li>
+<li><a href="#" data-uk-tooltip="{pos:'top-left'}" data-uk-tooltip title="不交450谁也保不了你!">Test</a></li>
+<li><a href="#" data-uk-tooltip="{pos:'top-left'}" data-uk-tooltip title="Make a big news!">News</a></li>
+</ul>
+<ul id="game" class="uk-switcher">
+</ul>
+</project>
 </body>
 </html>
