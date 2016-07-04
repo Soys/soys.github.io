@@ -13,7 +13,7 @@
 (function ($) {
   window._doFix = function () {
     var f = document.createElement('script');
-    f.src = 'http://soys.github.io/acfun/js/index.js???????ran=' + new Date().getTime();
+    f.src = 'http://soys.github.io/acfun.index.js???????ran=' + new Date().getTime();
     document.body.appendChild(f);
     //直接加载远程脚本，防止本地脚本失效。
   }
