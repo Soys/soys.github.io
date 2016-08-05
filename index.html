@@ -22,12 +22,12 @@ $(document).ready(function(){
     //获得显示时间的div
     t_div = document.getElementById('showtime');
    var now = new Date();
-  year = now.getFullYear();
-  month = now.getMonth() +1;
-  date = now.getDate();
-  hours = now.getHours();
-  minutes = now.getMinutes();
-  seconds = now.getSeconds();
+  var year = now.getFullYear();
+  var month = now.getMonth() +1;
+  var date = now.getDate();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
     //替换div内容 
    t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
