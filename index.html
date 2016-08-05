@@ -28,17 +28,28 @@ $(document).ready(function(){
   var hours = now.getHours();
   var minutes = now.getMinutes();
   var seconds = now.getSeconds();
+        if (month < 10) {
+            month = "0" + month;
+        }
+        if (day < 10) {
+            day = "0" + day;
+        }
+        if (hour < 10) {
+            hour = "0" + hour;
+        }
+        if (minute < 10) {
+            minute = "0" + minute;
+        }
+        if (second < 10) {
+            second = "0" + second;
+        }
+
     //替换div内容 
    t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
    setTimeout(time,1000);
   }
-  if(seconds < 10){
-     seconds = '0'+ seconds;
-   }
-   else{
-     seconds = seconds;
-  }
+  
 
 </script>
 
