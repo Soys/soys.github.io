@@ -1,6 +1,5 @@
-﻿
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="/jquery-1.12.3.min.js"></script>
@@ -33,14 +32,6 @@ $(document).ready(function(){
    t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
    setTimeout(time,1000);
-   if (month < 10){
-     month = "0"+month;
-   }
-   else{
-     if(date < 10){
-       date = "0"+date;
-     }
-   }
   }
 for(var i;)
 </script>
