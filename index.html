@@ -33,10 +33,11 @@ $(document).ready(function(){
    t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
    setTimeout(time,1000);
-  }
   if ( month < 10){
     month= "0" + month ;
   }
+  }
+
 </script>
 
 <script type="text/javascript">  
