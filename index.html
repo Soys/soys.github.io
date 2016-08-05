@@ -22,21 +22,20 @@ $(document).ready(function(){
   function time(){
     //获得显示时间的div
     t_div = document.getElementById('showtime');
-   var now=new Date()
+   var now = new Date();
+   var year = now.getFullYear();
+   var month = now.getMonth() +1;
+   var date = now.getDate();
+   var hours = now.getHours();
+   var minutes = now.getMinutes();
+   var seconds = now.getSeconds();
     //替换div内容 
-   t_div.innerHTML = ""+now.getFullYear()
-    +"年"+(now.getMonth()+1)+"月"+now.getDate()
-    +"日"+now.getHours()+"时"+now.getMinutes()
-    +"分"+now.getSeconds()+"秒";
+   t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
    setTimeout(time,1000);
   }
-  for (var i=0;i<10;i++)
-  {
-    document.write("0" + now[i]);
-    
-  }
 </script>
+
 <script type="text/javascript">  
 function delayURL(url, time) {  
 setTimeout("top.location.href='" + url + "'", time);  
