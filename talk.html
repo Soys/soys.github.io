@@ -5,17 +5,21 @@
 </head>
 <body>
 <header>
-<h2>評論區一覽</h2><hr type=inline />
+<h2>評論區一覽</h2>
+<span>目前暂未有评论存在于此!</span>
+
+<hr type=inline />
 <p></p>
 </header>
 <footer>
 <p>*網站不會將您的郵箱等訊息進行保存，請放心填寫。</p>
 <form action="#">
-請輸入電郵地址：<input type="email" placeholder="your@email.com"><br/>
-暱稱:<input type="name" placeholder="暱稱"><br/>
-文字顏色:<input type="color" value="#66ccff"/><br/>
+請輸入電郵地址：<input type="email" name="userEmail" placeholder="your@email.com"><br/>
+暱稱:<input type="name" name="nickname" placeholder="暱稱"><br/>
+文字顏色:<input type="color" name="textColor" value="#66ccff"/><br/>
 正文:<textarea width="40%" height="50%" placeholder=文明發言，從我做起。你當前最多只可發送30字… min=5 max=30></textarea>
 </form>
+<buttom type="submit">递交</buttom>
 </footer>
 </body>
 </html>
