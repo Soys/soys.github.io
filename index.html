@@ -28,9 +28,21 @@ $(document).ready(function(){
      month= '0' + month;
    }
    var date = now.getDate();
+   if(date<10){
+     date= '0' + date;
+   }
    var hours = now.getHours();
+   if(hours<10){
+     hours= '0' + hours;
+   }
    var minutes = now.getMinutes();
+   if(minutes<10){
+     minutes= '0' + minutes;
+   }
    var seconds = now.getSeconds();
+   if(seconds<10){
+     seconds= '0' + seconds;
+   }
     //替换div内容 
    t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
     //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
