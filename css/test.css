@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 主参数 Start */ 
+body{
+	/*background:url(bg.png) no-repeat fixed;*/
+	background-position:inherit;
+}
+.logo-subtext{
+	color:#4285f4;
+	font:16px/16px;
+	font-family:GasinamuNew;
+	left:85px;
+	position:
+	relative;
+	top:50px;
+	white-space:nowrap;
+	}
+.no-line{
+	text-decoration:none;
+	}
+#top{
+	height:50px;
+		display:block;
+}
+
+#header{
+	width:100%;
+	height: 100px;
+	display:block;
+	}
+	
+.lg{
+	margin-left: 50px;
+	width: 290px;
+	height: 72px;
+	background-image:url(../logo.png);
+	float:left;
+}
+
+#top-ad{
+	margin-right: 20px;
+	width: 400px;
+	height: 100px;
+	background:url(logo.png);
+	float:right;
+}
+
+#main{
+	width:100%;
+	height:auto;
+	display:block;
+	}
+/* 主参数 End */
+/* TItle & Time Start */
+
+.title{
+	font-size:24px;
+	font-style:inherit;
+	color:red;
+}
+
+.post{
+	font-size:10px;
+	color:gray;
+	}
+
+/* Title & Time End */
