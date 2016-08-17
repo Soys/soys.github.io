@@ -1,66 +1,48 @@
-<!DOCTYPE>
+
+<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script src="/jquery-1.12.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  $("p.music").hide();
-  $("button").click(function(){
-  $("p.music").toggle(500);
-  });
+<meta charset="utf-8">
+<title>Test</title>
+<link rel="stylesheet" href="/css/test.css" />
+<script src="/js/main.js"></script>
+<script src="/js/jquery-1.12.3.min.js"></script>
+<noscript><a style="color:#66ccff;" >当前页面似乎缺少了什么,请尝试开启JavaScript试试.</a></noscript>
+<script>
+$(document).ready(function() {
+  $('p.music').hide();
+  $('button').click(function(){
+  $('p.music').toggle(500);  
+	  });
 });
-$(document).ready(function(){
-  $("p.acfun").hide();
-  $("a").click(function(){
-  $("p.acfun").toggle(500);
-  });
+$(document).ready(function() {
+  $('p.acfun').hide();
+  $('a.ac').click(function(){
+  $('p.acfun').toggle(500);  
+	  });
 });
 </script>
-<script> 
-  function time(){
-    //获得显示时间的div
-    t_div = document.getElementById('showtime');
-   var now = new Date();
-   var year = now.getFullYear();
-   var month = now.getMonth() +1;
-   if(month<10){
-     month= '0' + month;
-   }
-   var date = now.getDate();
-   if(date<10){
-     date= '0' + date;
-   }
-   var hours = now.getHours();
-   if(hours<10){
-     hours= '0' + hours;
-   }
-   var minutes = now.getMinutes();
-   if(minutes<10){
-     minutes= '0' + minutes;
-   }
-   var seconds = now.getSeconds();
-   if(seconds<10){
-     seconds= '0' + seconds;
-   }
-    //替换div内容 
-   t_div.innerHTML = ""+ year +"年"+ month +"月"+ date  +"日"+ hours +"时"+ minutes +"分"+ seconds +"秒";
-    //等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
-   setTimeout(time,1000);
-  }
-</script>
-
-<title>首页 | Main Page | MoeYou.xyz</title>
 </head>
-<body onload="time()" background="/42956053.png" >
-<p><a>AcFun播放器替换</a><button type="button">打开音乐播放器</button></p>
+
+<body onLoad="time()">
+
+<div id="top">
+
+  <!---此处为顶部栏--->
+</div>
+<div id="header">
+  
+  <a class="lg no-line" href="#"><div class="logo-subtext"><div id="time"></div></div></a>
+  <div id="top-ad"></div>
+<div id="main">
+<p>
+<a class="ac">AcFun播放器替换</a>
+<button type="button">打开音乐播放器</button></p>
 <p class="acfun">AcFun FIX修正版:适用于acfun.tudou.com&ensp;<a href="/AcFun Fix.user.js">安装</a></p>
-<p class="music"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="http://music.163.com/outchain/player?type=0&id=10627041&auto=1&height=430"></iframe>
-</p>    
+<p class="music"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=10627041&auto=1&height=430"></iframe>
+</p> 
 
- <div id="showtime"></div>
-
-
+</div>
+</div>
 </body>
-   
 </html>
