@@ -6,7 +6,7 @@
 i=0;
 $(document).ready(function(){
   $('textarea').keypress(function(){
-    $('span.text').text(i+=1);
+    $('p.text').text(i+=1);
   });
 });
 </script>
@@ -26,7 +26,7 @@ $(document).ready(function(){
 請輸入電郵地址：<input type="email" name="userEmail" placeholder="your@email.com"><br/>
 暱稱:<input type="name" name="nickname" placeholder="暱稱"><br/>
 文字顏色:<input type="color" name="textColor" value="#66ccff"/><br/>
-正文:您當前已輸入<span id="text">0</span>個字。<br/></span><textarea width="400" height="200" placeholder=文明發言，從我做起。你當前最多只可發送30字…   maxlength="30"></textarea>
+正文:您當前已輸入<p id="text">0</p>個字。<br/></span><textarea width="400" height="200" placeholder=文明發言，從我做起。你當前最多只可發送30字…   maxlength="30"></textarea>
 </form>
 <button type="submit">递交</button>
 </footer>
