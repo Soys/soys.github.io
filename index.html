@@ -9,6 +9,14 @@
 <script src="/js/jquery-1.12.3.min.js"></script>
 <noscript><a style="color:#66ccff;" >当前页面似乎缺少了什么,请尝试开启JavaScript试试.</a></noscript>
 <script>
+$(document).ready(function(){
+  $("html").keydown(function(){
+    $("html").css("background-color","#FFFFCC");
+  });
+  $("input").keyup(function(){
+    $("html").css("background-color","#D6D6FF");
+  });
+});
 $(document).ready(function() {
   $('p.music').hide();
   $('button').click(function(){
