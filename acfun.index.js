@@ -8,7 +8,7 @@
     return
   }
   window._getPlayer = function() {
-    return document.getElementById("ACFlashPlayer-re") || document.getElementById("not-ACFlashPlayer-re") || document.getElementById("area-player") || document.getElementById("player");
+    return document.getElementById("ACFlashPlayer-re") || document.getElementById("not-ACFlashPlayer-re") || document.getElementById("area-player");
   };
   if (null == _getPlayer()) {
     alert("没有找到可以转换的播放器，可能是你没进AcFun视频页面，也有可能是个Bug");
@@ -18,6 +18,7 @@
   $.info("目前由于talkshowcn.com挂了，黑科技不可用。");
   $.info("少女修复中...");
   $.info("更多信息/反馈Bug请见 http://liriansu.com/acfunfixfix");
+   $.info("如果看见这条消息,则表明你不可以使用这个脚本。官方: http://liriansu.com/acfunfixfix");
   var source = $("a.active.primary").data("from");
   window.setupPlayer = function(d, e) {
     player = _getPlayer();
