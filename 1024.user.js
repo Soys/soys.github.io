@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         ACFUN NDQ BAN
-// @namespace    http://tampermonkey.net/
+// @namespace    http://www.acfun.cn/
 // @version      0.1
 // @description  NDQ Ban
 // @author       null
