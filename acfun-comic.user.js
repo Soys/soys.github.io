@@ -29,10 +29,20 @@
 }
     var acontent = getClass('article-content')[0];
     var acp = acontent.getElementsByTagName('p');
-    for(var i=0;i<acp.length;i++){
-        if(acp[i].style.display == 'none'){
-            acp[i].style.display = 'block';
+    var xianshi = getClass('action-up')[0];
+    xianshi.style = 'width:100px;height:18px;float:right;margin-top:-35px;';
+    xianshi.innerHTML = '<a onclick="gg();">显示</a>'+xianshi.innerHTML;
+    function gg(){
+        for(var i=0;i<acp.length;i++){
+            if(acp[i].style.display == 'none'){
+                acp[i].style.display = 'block';
+            }
         }
     }
+    /*for(var i=0;i<acp.length;i++){
+         if(acp[i].style.display == 'none'){
+             acp[i].style.display = 'block';
+        }
+    }*/
     // Your code here...
 })();
