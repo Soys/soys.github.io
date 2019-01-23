@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="gb2312" />
+		<title>MOLI.WS 郵箱登錄服務</title>
+		<style>
+			*{list-style:none;margin:0;padding:0;background: lightskyblue;}
+			input{font-size: 30px;border: none;}
+			input:focus{border: 1px solid grey;}
+			.user{color: grey;font-size: 30px;bottom: 45px;position: absolute;}
+			.passwd{color: grey;font-size: 30px;bottom: 5px;position:absolute;}
+			.btn{height:80px;border: 1px solid #000;width: 100px;float: right;bottom: 2px;right: 63%;position: absolute;border-radius: 5px;}
+			.title{color:grey;bottom: 0;right: 0;position: absolute;font-size: 75px;}
+			.check{bottom: 0;position: absolute;right: 54%;}
+		</style>
+		<noscript>
+			您似乎尚未打開Script，請打開Script以獲得最佳瀏覽體驗。
+		</noscript>
+	</head>
+	<body>
+		<span class="title">MOLI.WS電子郵件服務</span>
+		<div>
+		<form method="post" action="https://passport.yandex.com/for/moli.ws?mode=auth">
+			<p class="label user">賬戶：<input type="text" name="login" placeholder="請在此處輸入電子郵件位址" value="" tabindex="1"></p>
+			<p class="label passwd">密碼：<input type="hidden" name="retpath" value="http://mail.yandex.ru/for/your_domain_name"><input placeholder="請在此處輸入電子郵件密碼" type="password" name="passwd" value="" maxlength="100" tabindex="2"/></p>
+			<input class="btn" type="submit" value="登錄" />
+			<label class="check" style="float: left;margin: 12px;" for="a"><input type="checkbox" name="twoweeks" id="a" value=«no» tabindex="4"/>不保存登錄訊息<br>(<a href="https://yandex.ru/support/passport/#foreign-pc">這是什麽?</a>)</label>
+			</form>
+		</div>
+		<!--<div class="title">MOLI.WS 郵箱登錄服務</div>
+		<div id="mail-login">
+			<form method="post" action="https://passport.yandex.com/for/moli.ws?mode=auth"> 
+			 
+				<div class="label">用戶名:<input class="t-under" type="text" name="login" placeholder="Please enter your username" value="" tabindex="1"/></div>
+				<div class="label">&nbsp;密 碼 :<input type="hidden" name="retpath" value="http://mail.yandex.ru/for/your_domain_name"> 
+				<input class="t-under" type="password" name="passwd" placeholder="Please enter your password" value="" maxlength="100" tabindex="2"/> 
+				</div>
+				<label style="float: left;margin: 12px;" for="a"><input type="checkbox" name="twoweeks" id="a" value=«no» tabindex="4"/>不保存登錄訊息(<a href="https://yandex.ru/support/passport/#foreign-pc">這是什麽?</a>)</label> 
+			 <br>
+				<input class="btn" type="submit" name="In" value="提交" tabindex="5"/> 
+			</form>
+		</div>
+		<p>本站郵箱服務由<a href="https://yandex.com/" target="_self">Yandex Inc.</a>提供.</p>-->
+	</body>
+</html>
