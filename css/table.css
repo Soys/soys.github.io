@@ -24,6 +24,10 @@ th, td {
 				background-color: darkred;
 				color: white;
 }
+.rank-x {
+				background-color: gray;
+				color: white;
+}
 #age {
 				color: white;
 				text-decoration: none;
