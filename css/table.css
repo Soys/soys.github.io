@@ -32,3 +32,11 @@ th, td {
 				color: white;
 				text-decoration: none;
 }
+.hp-logo {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://img.gugugu.me/hp-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
