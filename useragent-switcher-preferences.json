@@ -1,0 +1,41 @@
+{
+  "blacklist": [],
+  "custom": {
+    "rewards.bing.com, webbrowsertools.com": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0 MSRewards/Desktop/1.4.0",
+    "www.bing.com, microsoft.com, xbox.com": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+  },
+  "last-update": 1790326609586,
+  "mode": "custom",
+  "parser": {},
+  "popular-browsers": [
+    "Internet Explorer",
+    "Safari",
+    "Chrome",
+    "Firefox",
+    "Opera",
+    "Edge",
+    "Vivaldi"
+  ],
+  "popular-oss": [
+    "Windows",
+    "Mac OS",
+    "Linux",
+    "Chromium OS",
+    "Android"
+  ],
+  "popup-browser": "Edge",
+  "protected": [
+    "google.com/recaptcha",
+    "gstatic.com/recaptcha",
+    "accounts.google.com",
+    "accounts.youtube.com",
+    "gitlab.com/users/sign_in",
+    "challenges.cloudflare.com"
+  ],
+  "remote-address": "",
+  "user-styling": "",
+  "userAgentData": true,
+  "whitelist": [],
+  "json-guid": "fb55743d-3e83-4e41-9aa4-3956ce712063",
+  "json-forced": false
+}
