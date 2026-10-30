@@ -2,7 +2,7 @@
   "blacklist": [],
   "custom": {
     "rewards.bing.com": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0 MSRewards/Desktop/1.4.0",
-    "www.bing.com, microsoft.com, xbox.com": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
+    "cn.bing.com, www.bing.com, microsoft.com, xbox.com": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0"
   },
   "last-update": 1790326609586,
   "mode": "custom",
